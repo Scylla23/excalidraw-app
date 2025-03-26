@@ -1,8 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import jwt from "jsonwebtoken";
-
-const JWT_SECRET =
-  (process.env.JWT_SECRET as string) || "123456789101112131415161718192021";
+import { JWT_SECRET } from "@repo/backend-common/config";
 
 // Extend the Request interface to include the user property
 declare global {
